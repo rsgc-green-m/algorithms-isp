@@ -6,19 +6,17 @@ import Foundation
 print("welcome")
 
 //Printing message
-print("Please enter your number ", terminator: "")
+print("Please enter your number ")
 
 //Getting users number
-var number = readLine(stripNewline: true)
-
-
+var number = "86000000000000"
 
 // get the string length
-var count = number!.characters.count
+var count = number.characters.count
 print("Count of characters is \(count)")
 
 // loop over each character in a string
-for c in number!.characters {
+for c in number.characters {
     print("\(c)")
 }
 
@@ -29,7 +27,7 @@ var exponent = count - 1
 var divisor = pow(Float(10), Float(exponent))
 
 // get the dividend
-var dividend = Float(number!)!
+var dividend = Float(number)!
 
 // get the coefficient for scientific notation
 var coefficient = dividend / divisor
