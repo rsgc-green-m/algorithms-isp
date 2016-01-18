@@ -1,14 +1,24 @@
 import Darwin
+import Foundation
 
-// a number to test
-var number = "47000000"
+
+//Printing welcome message
+print("welcome")
+
+//Printing message
+print("Please enter your number ", terminator: "")
+
+//Getting users number
+var number = readLine(stripNewline: true)
+
+
 
 // get the string length
-var count = number.characters.count
+var count = number!.characters.count
 print("Count of characters is \(count)")
 
 // loop over each character in a string
-for c in number.characters {
+for c in number!.characters {
     print("\(c)")
 }
 
@@ -19,7 +29,7 @@ var exponent = count - 1
 var divisor = pow(Float(10), Float(exponent))
 
 // get the dividend
-var dividend = Float(number)!
+var dividend = Float(number!)!
 
 // get the coefficient for scientific notation
 var coefficient = dividend / divisor
